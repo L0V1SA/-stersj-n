@@ -3,16 +3,7 @@ let gameOver = false;
 
 
 const none = "" ;
-/*
-function johanna2020 (colourChange) {
-    //alert ("hej jag är king");
-    document.getElementById ("header1").style.color = (colourChange);
-}
-*/
-/**
- * 
- * @param {Number} event - Checks all keyboard activity for enter press.
- */
+
 function go(event) {
     if (event.keyCode == 13 || event.which == 13) {
         choice();
@@ -76,27 +67,32 @@ function choice() {
         case "Aa" :
             document.getElementById("happen").innerHTML = "Rätt!" ;
             document.getElementById("question").innerHTML = "En yta större än Danmark, totalt ungefär 15% av Östersjöns botten är syrefri. Torskens tillgång till mat begränsas kraftigt på grund av bottendöden. När botten blir syrefattig kan djur inte leva på platsen, Östersjöns döda botten områden klassas som världens största. Vad händer om detta fortsätter?";
-            document.getElementById("choice").innerHTML = "du kan välja: Allt liv försvinner / Inget, fisken går inte på botten?" ;
+            document.getElementById("choices").innerHTML = "du kan välja: Allt liv försvinner / Inget, fisken går inte på botten?" ;
             clear() ;
             break ;
 
         case "Nä" :
-        document.getElementById("happen").innerHTML = "Stora utsläpp över lag är ej bra för det mesta här på jorden, att en fabrik släpper ut 10-20 ton fosfor per år är oacceptabelt." ;
-        document.getElementById("happen").style.color ="red" ;
-        gameOver = true ;
-        break ;
+            document.getElementById("happen").innerHTML = "Stora utsläpp över lag är ej bra för det mesta här på jorden, att en fabrik släpper ut 10-20 ton fosfor per år är oacceptabelt." ;
+            document.getElementById("happen").style.color ="red" ;
+            gameOver = true ;
+            break ;
 
         case "Allt liv försvinner" :
-        document.getElementById("happen").innerHTML = "Rätt!" ;
-        document.getElementById("question").innerHTML ="Grattis du fick 5 av 5 möjliga poäng! Tack så mycket för att du spelade spelet :) ha en bra dag!" ;
-        document.getElementById("Choice").innerHTML ="" ;
-        clear() ;
-        break ;
+            document.getElementById("happen").innerHTML = "Rätt!" ;
+            document.getElementById("question").innerHTML ="Grattis du fick 5 av 5 möjliga poäng! Tack så mycket för att du spelade spelet :) ha en bra dag!" ;
+            document.getElementById("choices").innerHTML ="" ;
+            clear() ;
+            break ;
 
         case "Inget, fisken går inte på botten?" :
+            document.getElementById("happen").innerHTML = "Sååå nära slutet!" ;
+            document.getElementById("happen").style.color = "red" ;
+            gameOver = true ;
+            break ;
         
         }
         if (gameOver) {
             document.getElementById("question").innerHTML = "Du förlorade :( , tryck på knappen uppe till vänster för att ladda om sidan och försöka igen! "
+            document.getElementById("choices").innerHTML ="" ;
         }
 }
