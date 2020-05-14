@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(204, 151, 253) ;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.socialdemokraternaBild {
+    max-height: 10rem;
+    margin: auto;
+    display: block;
+}
+.handelse {
+  text-align: center;
+}
+
+.inputDiv {
+  margin:0  auto;
+  display: block ;
+  margin-top: 1.2rem;
+}
+
+.choicesContainer {
+  margin: auto;
+  text-align: center;
+  margin-top: 1.5rem;
+  background-color: rgb(255, 164, 232);
+  width: 35%;
+  min-height: 15rem;  
+}
+  .center {
+    margin: auto;
+    width: 23%;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 15px;
+    margin-top: 0.5rem;
+  }
+  .facts {
+    margin: auto;
+    text-align: center;
+    margin-top: 1.5rem;
+    background-color: rgb(160, 250, 152);
+    width: 23%;
+    min-height: 15rem;
+    padding-bottom: 0.5rem;
+  }
+
+  #header1 {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+   
+  }
